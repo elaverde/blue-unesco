@@ -3,6 +3,7 @@
 function enqueue_bootstrap() {
   wp_enqueue_style('bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css');
   wp_enqueue_script('bootstrap', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array('jquery'), '3.3.1', true);
+  wp_enqueue_script('unesco-main', get_template_directory_uri() . '/js/main.js','', '0.0.1', true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
 
@@ -11,7 +12,7 @@ class Custom_Nav_Walker extends Walker_Nav_Menu {
 	  //$output .= '<li class="nav-item ' . implode(" ", $item->classes) . '">';
 	  $output .= '<li class="nav-item menu-item">';
 	 //$output .= '<a href="' . $item->url . '" class=" nav-link py-3 u_header_a ' . implode(" ", $item->classes) .  '">';
-	  $output .= '<a href="' . $item->url . '" class=" nav-link py-3 u_header_a  ">';
+	  $output .= '<a href="' . $item->url . '" class=" nav-link py-3 unesco_a ">';
 	  $output .= $item->title;
 	  $output .= '</a>';
 	}

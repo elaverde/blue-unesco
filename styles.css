@@ -46,28 +46,53 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter-Regular.eot');
+    src: url('./fonts/Inter-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Inter-Regular.woff2') format('woff2'),
+        url('./fonts/Inter-Regular.woff') format('woff'),
+        url('./fonts/Inter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+*{
+	font-family: 'Inter';
+	box-sizing: border-box !important;
+}
 
-
-
-
-.u_header{
-	background-color: #0077D4;
+/** +++++++++++++  Menu +++++++++++++  **/
+.uneco_header{
+	position: fixed;
+	width: 100%;
+	
+}
+#unesco_menu{
 	padding: 1em 0;
 	color: #000;
-
+	font-family: 'Inter' !important;
+	transition: all 0.5s ease-in-out;
 }
-.u_header_a{
+.bg_menu{
+	background-color: #0077D4;
+}
+.scroll-menu{
+	background-color: #0E4280;
+}
+
+.unesco_a{
 	color: #fff !important;
 	animation: 1s ease-out 0s 1 slideInFromLeft;
+	text-shadow: black 0.09em 0.09em 0.2em;
 }
-.u_header_a:hover{
+.unesco_a:hover{
 	border-bottom: 2px solid #fff;
 }
-
 .is_active{
 	border-bottom: 2px solid #fff;
 }
-
+/** +++++++++++++ Menu +++++++++++++  **/
 
 
 
